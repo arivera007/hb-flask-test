@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+    <title>Application Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1 id="boxed">Welcome, please give us your application details:</h1><br>
+  
+  <form action="/application-success" method=["POST"]>
+        <label for='name'>First name: </label>
+        <input id='name' class='inputbox' type="text" name="firstname"><br>
+        <label for='lname'>Last name: </label>
+        <input id= 'lname' class='inputbox' type="text" name="lastname"><br>
+        {% if jobs %}
+        <label for='s_jobtype'>Desired Job Type: </label>
+        <select id='s_jobtype' name="jobtype">
+            {% for job in jobs %}
+            <option value="job">job</option>
+            {% endfor %}
+        </select><br>
+        {% endif %}
+        <label for='t_salary'>Desired Salary: </label>
+        <input id= 't_salary' class='inputbox' type="text" name="salary"><br>
+
+        <input type="submit" class='button' value="Submit" > <!-- button don't require accesibility -->
+    </form>
+  
+
+
+</body>
+</html>
