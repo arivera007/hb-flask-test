@@ -1,11 +1,22 @@
 <!doctype html>
-<html>
+{% extends 'base.html' %}
+
+{% block body %}<html>
 <head>
     <title>Sample Home Page</title>
 </head>
 <body>
 
-<h1>This is the sample home page.</h1>
+<h1>No time to make it beautiful, sorry.</h1><br>
+<h2> To Apply, please enter your personal info. </h1><br>
 
+
+<form action="/application-form">
+
+    <input type="submit" class='button' value="APPLY" > 
+</form><br>
+  
 </body>
 </html>
+
+{% endblock %}
