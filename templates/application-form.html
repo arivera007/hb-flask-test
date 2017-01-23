@@ -7,7 +7,7 @@
 <body>
   <h1 id="boxed">Welcome, please give us your application details:</h1><br>
   
-  <form action="/application-success" method=["POST"]>
+  <form action="/application-success" method="POST">
         <label for='name'>First name: </label>
         <input id='name' class='inputbox' type="text" name="firstname"><br>
         <label for='lname'>Last name: </label>
@@ -16,7 +16,7 @@
         <label for='s_jobtype'>Desired Job Type: </label>
         <select id='s_jobtype' name="jobtype">
             {% for job in jobs %}
-            <option value="job">job</option>
+                <option value={{ job }}>{{ job }}</option>
             {% endfor %}
         </select><br>
         {% endif %}
